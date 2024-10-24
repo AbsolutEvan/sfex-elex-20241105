@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Error fetching XML data:', error));
 
     function updateDashboard(xmlDoc) {
+    console.log('updateDashboard function is running'); // Debugging
     try {
         // Update the election summary section
         const registrationNode = xmlDoc.querySelector("RegistrationAndTurnout electorGroupId2");

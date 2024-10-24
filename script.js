@@ -1,22 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Fetch and parse the XML data
     fetch('data/summary.xml')
-        .then(response => response.text())
+        .then(response => {
+            console.log('Fetch Response:', response); // Log the fetch response
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.text();
+        })
         .then(xmlString => {
             const parser = new DOMParser();
             const xmlDoc = parser.parseFromString(xmlString, "text/xml");
-            console.log('XML Document:', xmlDoc); // Debugging: Log the entire XML document
+            console.log('Parsed XML Document:', xmlDoc); // Log the parsed XML document
             updateDashboard(xmlDoc);
         })
-        .catch(error => console.error('Error fetching XML data:', error));
+        .catch(error => console.error('Error fetching or parsing XML data:', error));
+});
 
-    function updateDashboard(xmlDoc) {
+function updateDashboard(xmlDoc) {
     console.log('updateDashboard function is running'); // Debugging
     try {
+        console.log('XML Document:', xmlDoc); // Before accessing any data
+
         // Update the election summary section
         const registrationNode = xmlDoc.querySelector("RegistrationAndTurnout electorGroupId2");
+        console.log('Registration Node:', registrationNode); // Log this node
+
         const totalBallots = registrationNode?.getAttribute("ballots2") || 0;
-        console.log('Total Ballots:', totalBallots); // Debugging
+        console.log('Total Ballots:', totalBallots); // Log the value retrieved
         document.getElementById('total-ballots').textContent = totalBallots;
 
         const precinctsNode = xmlDoc.querySelector("Details");
@@ -64,4 +75,3 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Error updating dashboard:', error); // Debugging
     }
 }
-});

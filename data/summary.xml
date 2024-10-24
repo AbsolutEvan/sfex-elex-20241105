@@ -1,59 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Report xsi:schemaLocation="ElectionSummaryReportRPT http://emsserver/ReportServer?%2FEMSApplicationServerReports%2FElectionSummaryReportRPT&amp;rs%3ACommand=Render&amp;rs%3AFormat=XML&amp;rs%3ASessionID=he3dxd45bjckdgada5nn1l55&amp;rc%3ASchema=True" Name="ElectionSummaryReportRPT" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="ElectionSummaryReportRPT">
-    <Title>San Francisco General Election 2024 Summary</Title>
+    <Title>
+        <Report Name="Title" Textbox11="Election Summary Report" Textbox3="General Election" Textbox2="San Francisco" Textbox9="2024-11-05T00:00:00" Textbox12="" Textbox8="Summary Report - 1" />
+    </Title>
     <RegistrationAndTurnout>
-        <electorGroupId2_Collection>
-            <electorGroupId2 ballots2="125000">
-                <Details1_Collection>
-                    <Details1 countingGroup1="Election Day" ballots1="75000" />
-                    <Details1 countingGroup1="Vote by Mail" ballots1="50000" />
-                </Details1_Collection>
-            </electorGroupId2>
-        </electorGroupId2_Collection>
+        <Report Name="RegistrationAndTurnout">
+            <Tablix10>
+                <Textbox189 />
+                <electorGroupId2_Collection>
+                    <electorGroupId2 electorGroupId2="Total" ballots2="125000" ballots3="110000" Textbox32="90%" Textbox6="125000">
+                        <Details1_Collection>
+                            <Details1 countingGroup1="Election Day" ballots1="75000" Textbox171="60%" Textbox173="N/A" />
+                            <Details1 countingGroup1="Vote by Mail" ballots1="50000" Textbox171="40%" Textbox173="N/A" />
+                        </Details1_Collection>
+                    </electorGroupId2>
+                </electorGroupId2_Collection>
+            </Tablix10>
+        </Report>
     </RegistrationAndTurnout>
-    <Tablix2>
-        <Details reported="250 of 514" />
-    </Tablix2>
-    <ContestIdGroup_Collection>
-        <ContestIdGroup contestId="PRESIDENT AND VICE PRESIDENT">
-            <chGroup candidateNameTextBox4="Candidate A">
-                <cgGroup countingGroupName="Election Day" vot7="45000" />
-                <cgGroup countingGroupName="Vote by Mail" vot4="30000" />
-            </chGroup>
-            <chGroup candidateNameTextBox4="Candidate B">
-                <cgGroup countingGroupName="Election Day" vot7="50000" />
-                <cgGroup countingGroupName="Vote by Mail" vot4="35000" />
-            </chGroup>
-        </ContestIdGroup>
-        <ContestIdGroup contestId="UNITED STATES SENATOR">
-            <chGroup candidateNameTextBox4="Senator Candidate 1">
-                <cgGroup countingGroupName="Election Day" vot7="25000" />
-                <cgGroup countingGroupName="Vote by Mail" vot4="15000" />
-            </chGroup>
-            <chGroup candidateNameTextBox4="Senator Candidate 2">
-                <cgGroup countingGroupName="Election Day" vot7="20000" />
-                <cgGroup countingGroupName="Vote by Mail" vot4="10000" />
-            </chGroup>
-        </ContestIdGroup>
-        <ContestIdGroup contestId="GOVERNOR">
-            <chGroup candidateNameTextBox4="Governor Candidate A">
-                <cgGroup countingGroupName="Election Day" vot7="40000" />
-                <cgGroup countingGroupName="Vote by Mail" vot4="35000" />
-            </chGroup>
-            <chGroup candidateNameTextBox4="Governor Candidate B">
-                <cgGroup countingGroupName="Election Day" vot7="35000" />
-                <cgGroup countingGroupName="Vote by Mail" vot4="40000" />
-            </chGroup>
-        </ContestIdGroup>
-        <ContestIdGroup contestId="STATE SENATOR">
-            <chGroup candidateNameTextBox4="State Senator Candidate A">
-                <cgGroup countingGroupName="Election Day" vot7="20000" />
-                <cgGroup countingGroupName="Vote by Mail" vot4="18000" />
-            </chGroup>
-            <chGroup candidateNameTextBox4="State Senator Candidate B">
-                <cgGroup countingGroupName="Election Day" vot7="22000" />
-                <cgGroup countingGroupName="Vote by Mail" vot4="24000" />
-            </chGroup>
-        </ContestIdGroup>
-    </ContestIdGroup_Collection>
+    <tabBatchIdList>
+        <TabBatchGroup_Collection>
+            <TabBatchGroup contestId="">
+                <ElectionSummarySubReport>
+                    <Report Name="ElectionSummarySubReportRPT">
+                        <Tablix2>
+                            <Details_Collection>
+                                <Details reported="Precincts Reported: 400 of 514 (78%)" />
+                            </Details_Collection>
+                        </Tablix2>
+                        <Tablix22>
+                            <DetailsTab_Collection>
+                                <DetailsTab reportedTab="Tabulator Reported: 800 of 1061 (75%)" />
+                            </DetailsTab_Collection>
+                        </Tablix22>
+                        <Tablix3>
+                            <Details2_Collection>
+                                <Details2 reported3="Voters Cast: 125000 of 125000 (100%)" />
+                            </Details2_Collection>
+                        </Tablix3>
+                        <Tablix4>
+                            <Details3_Collection>
+                                <Details3 reported4="Cards Cast: 125000" />
+                            </Details3_Collection>
+                        </Tablix4>
+                        <contestList>
+                            <ContestIdGroup_Collection>
+                                <ContestIdGroup contestId="PRESIDENT AND VICE PRESIDENT">
+                                    <CandidateResults>
+                                        <Report Name="CandidateResultsRPT">
+                                            <Tablix1>
+                                                <chGroup_Collection>
+                                                    <chGroup>
+                                                        <candidateNameTextBox4 candidateNameTextBox4="Candidate A">
+                                                            <cgGroup_Collection>
+                                                                <cgGroup countingGroupName="Election Day" vot7="60000" />
+                                                                <cgGroup countingGroupName="Vote by Mail" vot7="30000" />
+                                                            </cgGroup_Collection>
+                                                        </candidateNameTextBox4>
+                                                    </chGroup>
+                                                    <chGroup>
+                                                        <candidateNameTextBox4 candidateNameTextBox4="Candidate B">
+                                                            <cgGroup_Collection>
+                                                                <cgGroup countingGroupName="Election Day" vot7="55000" />
+                                                                <cgGroup countingGroupName="Vote by Mail" vot7="25000" />
+                                                            </cgGroup_Collection>
+                                                        </candidateNameTextBox4>
+                                                    </chGroup>
+                                                </chGroup_Collection>
+                                            </Tablix1>
+                                        </Report>
+                                    </CandidateResults>
+                                </ContestIdGroup>
+                                <!-- Additional ContestIdGroups can be added similarly -->
+                            </ContestIdGroup_Collection>
+                        </contestList>
+                    </Report>
+                </ElectionSummarySubReport>
+            </TabBatchGroup>
+        </TabBatchGroup_Collection>
+    </tabBatchIdList>
 </Report>

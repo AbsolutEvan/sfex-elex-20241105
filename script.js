@@ -34,7 +34,7 @@ function updateDashboard(xmlDoc) {
         console.log('Precincts Reported:', precinctsReported); // Debugging
         document.getElementById('precincts-reported').textContent = precinctsReported;
 
-        const turnoutPercentage = registrationNode?.getAttribute("Textbox32") || "N/A";
+        const turnoutPercentage = registrationNode?.getAttribute("Textbox32") || "No Data";
         console.log('Voter Turnout:', turnoutPercentage); // Debugging
         document.getElementById('voter-turnout').textContent = turnoutPercentage;
 

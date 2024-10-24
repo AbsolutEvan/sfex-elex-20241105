@@ -1,6 +1,5 @@
 console.log('script.js is running');
 
-
 document.addEventListener('DOMContentLoaded', () => {
     // Fetch and parse the XML data
     fetch('data/summary.xml')
@@ -21,16 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function updateDashboard(xmlDoc) {
-    console.log('updateDashboard function is running'); // Debugging
+    console.log('updateDashboard function is running'); // Confirm that the function is called
+
     try {
-        console.log('XML Document:', xmlDoc); // Before accessing any data
-
         // Update the election summary section
-        const registrationNode = xmlDoc.querySelector("RegistrationAndTurnout electorGroupId2");
-        console.log('Registration Node:', registrationNode); // Log this node
-
+        const registrationNode = xmlDoc.querySelector("electorGroupId2");
         const totalBallots = registrationNode?.getAttribute("ballots2") || 0;
-        console.log('Total Ballots:', totalBallots); // Log the value retrieved
+        console.log('Total Ballots:', totalBallots); // Debugging
         document.getElementById('total-ballots').textContent = totalBallots;
 
         const precinctsNode = xmlDoc.querySelector("Details");

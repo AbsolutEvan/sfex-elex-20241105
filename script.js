@@ -34,6 +34,10 @@ function updateDashboard(xmlDoc) {
         console.log('Precincts Reported:', precinctsReported); // Debugging
         document.getElementById('precincts-reported').textContent = precinctsReported;
 
+        const turnoutPercentage = registrationNode?.getAttribute("Textbox32") || "N/A";
+        console.log('Voter Turnout:', turnoutPercentage); // Debugging
+        document.getElementById('voter-turnout').textContent = turnoutPercentage;
+
         // Populate the contests overview
         const contestsList = document.getElementById('contests-list');
         contestsList.innerHTML = ''; // Clear previous entries

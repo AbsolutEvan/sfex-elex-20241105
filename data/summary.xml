@@ -1,34 +1,59 @@
-<ElectionSummaryReport>
+<?xml version="1.0" encoding="utf-8"?>
+<Report xsi:schemaLocation="ElectionSummaryReportRPT http://emsserver/ReportServer?%2FEMSApplicationServerReports%2FElectionSummaryReportRPT&amp;rs%3ACommand=Render&amp;rs%3AFormat=XML&amp;rs%3ASessionID=he3dxd45bjckdgada5nn1l55&amp;rc%3ASchema=True" Name="ElectionSummaryReportRPT" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="ElectionSummaryReportRPT">
+    <Title>San Francisco General Election 2024 Summary</Title>
     <RegistrationAndTurnout>
-        <electorGroupId2 ballots2="125,000">
-            <Details1_Collection>
-                <Details1 countingGroup1="Election Day" ballots1="75,000" />
-                <Details1 countingGroup1="Vote by Mail" ballots1="50,000" />
-            </Details1_Collection>
-        </electorGroupId2>
+        <electorGroupId2_Collection>
+            <electorGroupId2 ballots2="125000">
+                <Details1_Collection>
+                    <Details1 countingGroup1="Election Day" ballots1="75000" />
+                    <Details1 countingGroup1="Vote by Mail" ballots1="50000" />
+                </Details1_Collection>
+            </electorGroupId2>
+        </electorGroupId2_Collection>
     </RegistrationAndTurnout>
     <Tablix2>
         <Details reported="250 of 514" />
     </Tablix2>
-    <ContestIdGroup contestId="GOVERNOR">
-        <chGroup candidateNameTextBox4="Candidate X">
-            <cgGroup countingGroupName="Election Day" vot7="40000" />
-            <cgGroup countingGroupName="Vote by Mail" vot7="35000" />
-        </chGroup>
-        <chGroup candidateNameTextBox4="Candidate Y">
-            <cgGroup countingGroupName="Election Day" vot7="35000" />
-            <cgGroup countingGroupName="Vote by Mail" vot7="40000" />
-        </chGroup>
-    </ContestIdGroup>
-    <ContestIdGroup contestId="STATE SENATOR">
-        <chGroup candidateNameTextBox4="Candidate A">
-            <cgGroup countingGroupName="Election Day" vot7="20000" />
-            <cgGroup countingGroupName="Vote by Mail" vot7="18000" />
-        </chGroup>
-        <chGroup candidateNameTextBox4="Candidate B">
-            <cgGroup countingGroupName="Election Day" vot7="22000" />
-            <cgGroup countingGroupName="Vote by Mail" vot7="24000" />
-        </chGroup>
-    </ContestIdGroup>
-    <!-- Add more ContestIdGroup sections if needed -->
-</ElectionSummaryReport>
+    <ContestIdGroup_Collection>
+        <ContestIdGroup contestId="PRESIDENT AND VICE PRESIDENT">
+            <chGroup candidateNameTextBox4="Candidate A">
+                <cgGroup countingGroupName="Election Day" vot7="45000" />
+                <cgGroup countingGroupName="Vote by Mail" vot4="30000" />
+            </chGroup>
+            <chGroup candidateNameTextBox4="Candidate B">
+                <cgGroup countingGroupName="Election Day" vot7="50000" />
+                <cgGroup countingGroupName="Vote by Mail" vot4="35000" />
+            </chGroup>
+        </ContestIdGroup>
+        <ContestIdGroup contestId="UNITED STATES SENATOR">
+            <chGroup candidateNameTextBox4="Senator Candidate 1">
+                <cgGroup countingGroupName="Election Day" vot7="25000" />
+                <cgGroup countingGroupName="Vote by Mail" vot4="15000" />
+            </chGroup>
+            <chGroup candidateNameTextBox4="Senator Candidate 2">
+                <cgGroup countingGroupName="Election Day" vot7="20000" />
+                <cgGroup countingGroupName="Vote by Mail" vot4="10000" />
+            </chGroup>
+        </ContestIdGroup>
+        <ContestIdGroup contestId="GOVERNOR">
+            <chGroup candidateNameTextBox4="Governor Candidate A">
+                <cgGroup countingGroupName="Election Day" vot7="40000" />
+                <cgGroup countingGroupName="Vote by Mail" vot4="35000" />
+            </chGroup>
+            <chGroup candidateNameTextBox4="Governor Candidate B">
+                <cgGroup countingGroupName="Election Day" vot7="35000" />
+                <cgGroup countingGroupName="Vote by Mail" vot4="40000" />
+            </chGroup>
+        </ContestIdGroup>
+        <ContestIdGroup contestId="STATE SENATOR">
+            <chGroup candidateNameTextBox4="State Senator Candidate A">
+                <cgGroup countingGroupName="Election Day" vot7="20000" />
+                <cgGroup countingGroupName="Vote by Mail" vot4="18000" />
+            </chGroup>
+            <chGroup candidateNameTextBox4="State Senator Candidate B">
+                <cgGroup countingGroupName="Election Day" vot7="22000" />
+                <cgGroup countingGroupName="Vote by Mail" vot4="24000" />
+            </chGroup>
+        </ContestIdGroup>
+    </ContestIdGroup_Collection>
+</Report>

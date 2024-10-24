@@ -1,3 +1,6 @@
+console.log('script.js is running');
+
+
 document.addEventListener('DOMContentLoaded', () => {
     // Fetch and parse the XML data
     fetch('data/summary.xml')

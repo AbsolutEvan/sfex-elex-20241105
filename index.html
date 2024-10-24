@@ -1,22 +1,45 @@
-<section id="summary">
-    <h2>Election Summary</h2>
-    <div id="metrics">
-        <div>Total Ballots Cast: <span id="total-ballots">0</span></div>
-        <div>Precincts Reported: <span id="precincts-reported">0 of 514</span></div>
-        <div>Voter Turnout: <span id="voter-turnout">N/A</span></div>
-    </div>
-</section>
-<main>
-    <section id="contests">
-        <h2>Contests Overview</h2>
-        <div id="contests-list">
-            <!-- Individual contest details will be populated here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Francisco General Election 2024 Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>San Francisco General Election 2024</h1>
+        <p>November 5, 2024</p>
+    </header>
+
+    <section id="summary">
+        <h2>Election Summary</h2>
+        <div id="metrics">
+            <div>Total Ballots Cast: <span id="total-ballots">0</span></div>
+            <div>Precincts Reported: <span id="precincts-reported">0 of 514</span></div>
+            <div>Voter Turnout: <span id="voter-turnout">N/A</span></div>
         </div>
     </section>
-    <aside id="sidebar">
-        <h2>Top Candidates</h2>
-        <ul id="top-candidates">
-            <!-- Top candidates per contest will be listed here -->
-        </ul>
-    </aside>
-</main>
+
+    <main>
+        <section id="contests">
+            <h2>Contests Overview</h2>
+            <div id="contests-list">
+                <!-- Individual contest details will be populated here -->
+            </div>
+        </section>
+        <aside id="sidebar">
+            <h2>Top Candidates</h2>
+            <ul id="top-candidates">
+                <!-- Top candidates per contest will be listed here -->
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Data is updated in real-time from official sources.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
